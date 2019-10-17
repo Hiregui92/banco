@@ -1,0 +1,13 @@
+<p>movimiento-list works!</p>
+<p>
+	<a routerLink="/movimientos/create">Crear Movimiento</a>
+</p>
+<div *ngIf="movimientos.length > 0">
+	<ul>
+		<li *ngFor="let movimiento of movimientos; let id = index">
+			{{movimiento.tipo}} /
+			<!-- {{cuenta.phone}} -->
+			<a type="button" href="/movimientos/detail/{{id}}">Ver</a>
+		</li>
+	</ul>
+</div>

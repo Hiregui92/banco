@@ -1,0 +1,18 @@
+<p>cliente-list works!</p>
+
+<p>
+  <a routerLink="/clientes/create">Crear</a>
+</p>
+
+<div *ngIf="clientes.length > 0">
+	<ul>
+		<li *ngFor="let cliente of clientes; let id = index">
+			{{cliente.name}} /
+			{{cliente.phone}} /
+			{{cliente.direction}}
+			<a type="button" href="/clientes/detail/{{id}}">Ver</a>
+			|
+			<button type="button" (click)="eliminar(id)">Eliminar</button>
+		</li>
+	</ul>
+</div>

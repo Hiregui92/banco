@@ -1,0 +1,10 @@
+<p>cuentas-list works!</p>
+<div *ngIf="cuentas.length > 0">
+	<ul>
+		<li *ngFor="let cuenta of cuentas; let id = index">
+			{{cuenta.number}} /
+			<!-- {{cuenta.phone}} -->
+			<a type="button" href="/cuentas/detail/{{id}}">Ver</a>
+		</li>
+	</ul>
+</div>

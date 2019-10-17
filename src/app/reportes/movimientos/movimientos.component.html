@@ -1,0 +1,28 @@
+<p>movimientos works!</p>
+
+<form [formGroup]="movForm" (ngSubmit)="onSubmit(movForm.value)">
+  <div class="form-group">
+    <label for="name">Inicio</label>
+    <input id="name" class="form-control" type="date" formControlName="start">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Fin</label>
+    <input id="name" class="form-control" type="date" formControlName="end">
+  </div>
+
+
+  <div class="form-group">
+    <label for="name">Cliente</label>
+    <select>
+    	<option *ngFor="let cliente of clientes">{{cliente.name}}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit">consultar</button>
+
+</form>
+
+<!-- <div *ngIf="res.length > 0">
+	
+</div>
+ -->

@@ -1,0 +1,20 @@
+<p>
+  <a routerLink="/cuentas/create">Crear Cuenta</a>
+</p>
+
+<form [formGroup]="cuentaForm" (ngSubmit)="onSubmit(cuentaForm.value)">
+  <div class="form-group">
+    <label for="name">Numero de Cuenta</label>
+    <input id="name" class="form-control" type="text" formControlName="number" placeholder="Name">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Saldo</label>
+    <input id="name" class="form-control" type="text" formControlName="amount" placeholder="amount">
+  </div>
+
+ 
+
+  <button class="btn btn-primary" type="submit">save</button>
+
+</form>

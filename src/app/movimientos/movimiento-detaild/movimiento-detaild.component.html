@@ -1,0 +1,23 @@
+<p>movimiento-detaild works!</p>
+
+<form [formGroup]="movimientoForm" (ngSubmit)="onSubmit(movimientoForm.value)">
+	<div class="form-group">
+		<label for="name">tipo</label>
+		<input id="name" class="form-control" type="text" formControlName="tipo" placeholder="tipo">
+	</div>
+
+	<div class="form-group">
+		<label for="name">Fecha</label>
+		<input id="date" class="form-control" type="date" formControlName="fecha">
+	</div>
+
+	<div class="form-group">
+		<label for="name">Valor</label>
+		<input id="valor" class="form-control" type="text" formControlName="valor" placeholder="amount">
+	</div>
+
+
+
+	<button class="btn btn-primary" type="submit">save</button>
+
+</form>
